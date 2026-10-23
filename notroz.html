@@ -56,10 +56,11 @@ h1 em{font-style:normal;color:var(--green-d)}
 .product-pair{display:flex;align-items:center;justify-content:center;gap:clamp(10px,2vw,22px);flex-wrap:nowrap;position:relative;z-index:1;width:100%;max-width:520px}
 .product-pair img{width:clamp(120px,18vw,220px);max-width:40%;height:auto;border-radius:16px;border:1px solid var(--line);background:#fff;box-shadow:0 16px 28px -24px rgba(30,60,15,.4)}
 .plus{font:900 clamp(38px,5vw,84px)/1 var(--display);color:var(--green-d);display:inline-block;transform:translateY(-10px);flex:none}
-.doc-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:22px;align-items:center}
-.doc-copy,.doc-media{background:var(--surface);border:1px solid var(--line);border-radius:24px;padding:24px}
+.doc-grid{display:grid;grid-template-columns:repeat(2, minmax(0, 1fr));gap:22px;align-items:start;}
+.doc-copy,.doc-media{background:var(--surface);border:1px solid var(--line);border-radius:24px;padding:24px;width:100%;min-width:0;align-self:start;}
 .doc-copy h3,.doc-media h3{font-size:clamp(22px,2.4vw,26px);margin:0 0 12px}
 .doc-copy p{margin:0 0 12px;color:var(--muted)}
+.doc-media > .doc-copy{width:100%;}
 .usage-list{margin:0;padding-left:18px;display:grid;gap:8px;color:var(--ink);font-weight:600}
 .usage-list li::marker{color:var(--green-d)}
 .doc-links{display:flex;flex-wrap:wrap;gap:12px;margin-top:18px}
@@ -173,7 +174,7 @@ body.closed{overflow:hidden}
       <div class="hero-l">
         <div class="brand"><b>ANFA</b><span>Group of Companies</span></div>
         <span class="kicker">Oilada diabet bormi?</span>
-        <h1>Qondagi qand miqdorini <em>normada ushlashga</em> yordam bering</h1>
+        <h1>Nootroz <em>XOTIRA DIQQAT VA ENERGIYA UCHUN ILG’OR NOOTROP KOMPLEKS</h1>
         <div class="product">
           <div class="product-pair">
             <img src="./NOOTROZ3.png" alt="NOOTROZ product">
@@ -182,7 +183,7 @@ body.closed{overflow:hidden}
           </div>
           
         </div>
-        <p class="free-line">hoziroq qon'giroq qilin va 1+1 aksiyaga ega boling</p>
+        <p class="free-line">hoziroq qon'giroq qilin va 1+1 aksiyaga va 100% chegirmaga ega boling</p>
       </div>
 
       <div class="card" id="ariza">
@@ -219,6 +220,50 @@ body.closed{overflow:hidden}
     <div class="wrap">
       <h2>Как использовать лекарство</h2>
       <div class="doc-grid">
+           <div class="doc-media" style="height:auto">
+            <div class="doc-copy" style="padding:18px;">
+              <h4 style="font-weight: 900; font-size: 30px; margin-bottom: 10px;">NOOTROZ BFQsini qo‘llash bo‘yicha yo‘riqnoma</h4>
+              <p><strong>O‘zbekiston Respublikasi Sog‘liqni Saqlash vazirligi tomonidan tasdiqlangan. O'zMSt 166-2024</strong></p>
+
+              <p><strong>Qo‘llanilishi:</strong> NOOTROZ biologik faol qo‘shimchasi quyidagilar uchun tavsiya etiladi: xotira, diqqat va konsentratsiyani qo‘llab-quvvatlash, keksalarda kognitiv buzilishlarning oldini olish, charchoqlik va stressni kamaytirish, miya qon aylanishini yaxshilash, aqliy yuklamalarda asab tizimini qo‘llab-quvvatlash.</p>
+
+              <p><strong>Qo‘llash usuli va dozalari:</strong> 18 yoshdan kattalar: kuniga 1 kapsula, ovqat vaqtida, yetarli miqdorda suv bilan. Qabul qilish kursi 1–2 oy. Zarur bo‘lsa, kursni takrorlash mumkin.</p>
+
+              <p><strong>Qarshi ko‘rsatmalar:</strong> Tarkibiy qismlarga individual toqatsizlik, homiladorlik va emizish davri (faqat shifokor tavsiyasi bilan), 12 yoshgacha bo‘lgan bolalar, qon ketishga moyillik yoki antikoagulyantlar qabul qilishda ehtiyotkorlik bilan.</p>
+
+              <p><strong>Nojo‘ya ta’sirlar:</strong> Tavsiya etilgan dozaga rioya qilinsa, yon (nojo‘ya) ta’sirlar kuzatilmaydi. Kamdan-kam hollarda allergik reaksiya (toshma, qichishish) va ovqat hazm qilishdagi noqulaylik (ko‘ngil aynishi, qorin og‘irligi) bo‘lishi mumkin.</p>
+
+              <p><strong>Me’yordan ortiq qabul qilish:</strong> Doza oshirib yuborilganda yon ta’sirlar kuchayishi mumkin: ko‘ngil aynishi, oshqozon buzilishi, bosh og‘rig‘i. Bunday hollarda qabulni to‘xtatish va shifokorga murojaat qilish kerak.</p>
+
+              <p><strong>Boshqa vositalar bilan o‘zaro ta'siri:</strong> Ginkgo Biloba antikoagulyantlarning (varfarin, aspirin) ta’sirini kuchaytirishi mumkin. Omega-3 yog‘ kislotalari yog‘ pasaytiruvchi dorilarning samaradorligini oshiradi. B vitaminlari ko‘pchilik dorilar bilan mos keladi, lekin yuqori dozada qabul qilinayotkanda shifokor maslahati zarur.</p>
+
+              <p><strong>Saqlash sharoitlari:</strong> Quruq joyda, +25°C dan yuqori bo‘lmagan haroratda, to‘g‘ridan-to‘g‘ri quyosh nurlari tushmaydighan hamda bolalar qo‘li yetmaydigan joyda saqlang.</p>
+
+              <p><strong>Yaroqlilik muddati:</strong> Ishlab chiqarilgan kundan boshlab 2 yil. Qadoqda ko‘rsatilgan yaroqlilik muddati tugagandan keyin ishlatish mumkin emas.</p>
+
+              <p><strong>Ishlab chiqaruvchi:</strong> “TOPPHARM SERVICE” MChJ. O‘zbekiston Respublikasi, Sirdaryo viloyati, Sirdaryo tumani, Kamolot MFY, Yangi ko‘cha, 90-uy. E-mail: info@anfa.uz. www.anfa.uz</p>
+
+              <p><strong>Tarkibi va chiqarilish shakli:</strong> Yumshoq jelatin kapsulalari №30. Ginkgo Biloba bargi ekstrakti – 180 mg, Omega-3 yog‘ kislotalari – 330 mg (DHA 12% va EPA 18%), Vitamin B1 – 0,7 mg, Vitamin B6 – 1 mg, Vitamin B12 – 1 mkg, Pantoten kislotasi – 3 mg, Yordamchi moddalar: yetarli miqdorda.</p>
+
+              <p><strong>NOOTROZ</strong> miya faoliyatini qo‘llab-quvvatlash, xotira, diqqat va aqliy energiyani kuchaytiruvchi noyob majmuadir. Tarkibida Ginkgo Biloba ekstrakti, Omega-3 yog‘ kislotalari va B guruhi vitaminlari mavjud bo‘lib, ular birgalikda miya qon aylanishini me’yorlashtirishga, kognitiv funksiyalarni kuchaytirishga va charchoqlikni kamaytirishga yordam beradi.</p>
+
+              <p>Ginkgo Biloba va Omega-3 miya qon ta’minoti va oziqlanishini yaxshilab, kognitiv funksiyalarni oshiradi. Vitaminlar B1, B6 va B12 asab tizimini qo‘llab-quvvatlovchi va energiya almashinuvini yaxshilovchi klassik neyrotrop kompleks hisoblanadi. Pantoten kislotasi va B vitaminlari stressga chidamlilikni oshiradi va aqliy yuklamalarda yordam beradi. Shu tariqa NOOTROZ to‘liq nutropik kompleks bo‘lib, xotira, diqqat va ish qobiliyatini yaxshilaydi.</p>
+
+              <p><strong>Omega-3 yog‘ kislotalari (DHA 12% va EPA 18%)</strong> miya va asab tizimi uchun zarur. DHA neyron hujayra membranalarining asosiy tarkibiy qismi bo‘lib, asab impulslarini uzatishni yaxshilaydi. EPA yallig‘lanishga qarshi ta’sir ko‘rsatadi va qon tomir salomatligini qo‘llab-quvvatlaydi. Ular birgalikda xotirani, fikr ravshanligini va hissiy holatni mustahkamlaydi, shuningdek yurak-qon tomir kasalliklari xavfini kamaytirib, bilvosita miya qon aylanishini yaxshilaydi.</p>
+
+              <p><strong>Vitamin B6 (Piridoksin)</strong> neyrotransmitterlar (serotonin, dofamin, GABA) sintezi uchun muhim hisoblanadi. U aminokislotalar va oqsillar almashinuviga ta’sir qiladi, asab tizimi faoliyatini va kayfiyatni qo‘llab-quvvatlaydi.</p>
+
+              <p><strong>Ginkgo Biloba bargi ekstrakti</strong> kognitiv faoliyatni qo‘llab-quvvatlovchi mashhur o‘simlik ekstrakti hisoblanadi. U miyada mikrotsirkulyatsiya va qon oqimini yaxshilaydi, xotira, diqqat va konsentratsiyani oshiradi, miya hujayralarini oksidativ stressdan himoya qiladi, keksalarda kognitiv pasayishni oldini olishga yordam beradi va qon aylanishi buzilishi bilan bog‘liq bosh aylanishi, quloqda shovqin va migrenni kamaytirishda yordam beradi.</p>
+
+              <p><strong>Vitamin B1 (Tiamin)</strong> uglevod almashinuvini tartibga solib, miyani energiya bilan ta’minlaydi. Asab impulslarini uzatishda ishtirok etadi. Vitamin B1 yetishmovchiligi charchoq, jahl dorlik va xotira pasayishiga olib kelishi mumkin.</p>
+
+              <p><strong>Pantoten kislotasi</strong> energiya almashinuvi uchun zarur bo‘lgan coenzyme A ning tarkibiy qismi hisoblanadi. Buyrak usti bezlari gormonlari ishlab chiqilishida ishtirok etadi, stressga chidamlilikni oshiradi va charchoqlikni kamaytiradi.</p>
+
+              <p><strong>Vitamin B12 (Metilkobalamin)</strong> miyelin hosil bo‘lishini ta’minlaydi, DNK sintezi va qizil qon tanachalari shakllanishida ishtirok etadi. Vitamin B12 yetishmovchiligi anemiya va kognitiv buzilishlarga olib keladi.</p>
+
+              <img class="gmp-mark" src="./GMP - TOP PHARM SERVICE (ANFA PHARMACEUTICALS).png" alt="GMP certificate">
+            </div>
+          </div>
         <div class="doc-copy">
           <h3># МИГРЕНАЗ L®</h3>
           <p><strong>ANFA PHARMACEUTICALS</strong></p>
@@ -290,23 +335,7 @@ body.closed{overflow:hidden}
           <p><strong>Контактная информация</strong><br>ООО «TOP PHARM SERVICE»<br>Ташкентская обл., Зангиатинский р-н, КФИ Гулистан, ул. ГСКБ<br>Телефон: +998 (95) 195 59 00<br>E-mail: info@anfa.uz<br>Сайт: www.anfa.uz</p>
         </div>
 
-        <div class="doc-media">
-          <img class="gmp-mark" src="./GMP - TOP PHARM SERVICE (ANFA PHARMACEUTICALS).png" alt="GMP certificate">
-          <div class="doc-copy" style="padding:18px;">
-            <h4>NOOTROZ BFQsini qo‘llash bo‘yicha yo‘riqnoma</h4>
-            <p><strong>Qo‘llanilishi:</strong> NOOTROZ biologik faol qo‘shimchasi quyidagilar uchun tavsiya etiladi: xotira, diqqat va konsentratsiyani qo‘llab-quvvatlash, keksalarda kognitiv buzilishlarning oldini olish, charchoqlik va stressni kamaytirish, miya qon aylanishini yaxshilash, aqliy yuklamalarda asab tizimini qo‘llab-quvvatlash.</p>
-            <p><strong>Qo‘llash usuli va dozalari:</strong> 18 yoshdan kattalar: kuniga 1 kapsula, ovqat vaqtida, yetarli miqdorda suv bilan. Qabul qilish kursi 1–2 oy. Zarur bo‘lsa, kursni takrorlash mumkin.</p>
-            <p><strong>Qarshi ko‘rsatmalar:</strong> tarkibiy qismlarga individual toqatlarsizlik, homiladorlik va emizish davri (faqat shifokor tavsiyasi bilan), 12 yoshgacha bo‘lgan bolalar, qon ketishga moyillik yoki antikoagulyantlar qabul qilishda ehtiyotkorlik bilan.</p>
-            <p><strong>Nojo‘ya ta’sirlar:</strong> tavsiya etilgan dozaga rioya qilinsa, nojo‘ya ta’sirlar kuzatilmaydi. Kamdan-kam hollarda allergik reaksiya yoki ovqat hazm qilishdagi noqulaylik bo‘lishi mumkin.</p>
-            <p><strong>Me’yordan ortiq qabul qilish:</strong> doza oshirib yuborilganda yon ta’sirlar kuchayishi mumkin: ko‘ngil aynishi, oshqozon buzilishi, bosh og‘rig‘i. Bunday hollarda qabulni to‘xtatish va shifokorga murojaat qilish kerak.</p>
-            <p><strong>Saqlash sharoitlari:</strong> quruq joyda, +25°C dan yuqori bo‘lmagan haroratda, to‘g‘ridan-to‘g‘ri quyosh nurlari tushmaydigan va bolalar qo‘li yetmaydigan joyda saqlang.</p>
-            <p><strong>Yaroqlilik muddati:</strong> ishlab chiqarilgan kundan boshlab 2 yil. Qadoqda ko‘rsatilgan yaroqlilik muddati tugagandan keyin ishlatish mumkin emas.</p>
-            <p><strong>Ishlab chiqaruvchi:</strong> “TOPPHARM SERVICE” MChJ. O‘zbekiston Respublikasi, Sirdaryo viloyati, Sirdaryo tumani, Kamolot MFY, Yangi ko‘cha, 90-uy. E-mail: info@anfa.uz. www.anfa.uz</p>
-            <p><strong>Tarkibi va chiqarilish shakli:</strong> yumshoq jelatin kapsulalari №30. Ginkgo Biloba bargi ekstrakti – 180 mg, Omega-3 yog‘ kislotalari – 330 mg (DHA 12% va EPA 18%), Vitamin B1 – 0,7 mg, Vitamin B6 – 1 mg, Vitamin B12 – 1 mkg, Pantoten kislotasi – 3 mg.</p>
-            <p><strong>NOOTROZ</strong> miya faoliyatini qo‘llab-quvvatlash, xotira, diqqat va aqliy energiyani kuchaytiruvchi noyob majmuadir. Tarkibida Ginkgo Biloba ekstrakti, Omega-3 yog‘ kislotalari va B guruhi vitaminlari mavjud bo‘lib, ular birgalikda miya qon aylanishini me’yorlashtirishga, kognitiv funksiyalarni kuchaytirishga va charchoqlikni kamaytirishga yordam beradi.</p>
-            <p>Ginkgo Biloba va Omega-3 miya qon ta’minoti va oziqlanishini yaxshilab, kognitiv funksiyalarni oshiradi. Vitaminlar B1, B6 va B12 asab tizimini qo‘llab-quvvatlovchi va energiya almashinuvini yaxshilovchi klassik neyrotrop kompleks hisoblanadi. Pantoten kislotasi va B vitaminlari stressga chidamlilikni oshiradi va aqliy yuklamalarda yordam beradi.</p>
-          </div>
-        </div>
+     
       </div>
     </div>
   </section>

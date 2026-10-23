@@ -43,15 +43,35 @@ p{margin:0}
 h1{font-size:clamp(26px,4.2vw,40px);font-weight:800;color:var(--dark)}
 h1 em{font-style:normal;color:var(--green-d)}
 
-.product{position:relative;display:grid;justify-items:center;margin-top:18px}
-.product img{width:min(230px,58vw);height:auto;filter:drop-shadow(0 26px 30px rgba(30,60,15,.28));animation:float 5s ease-in-out infinite}
+.product{position:relative;display:grid;justify-items:center;margin-top:18px;padding:8px 16px 0;max-width:540px;width:100%}
+.product img{height:auto;filter:drop-shadow(0 26px 30px rgba(30,60,15,.28));animation:float 5s ease-in-out infinite}
 @keyframes float{50%{transform:translateY(-8px)}}
-.badge{position:absolute;top:2%;right:calc(50% - min(260px,72vw)/2 - 10px);width:min(150px,38vw);aspect-ratio:1;display:grid;place-items:center;transform:rotate(-12deg);animation:pulse 1.8s ease-in-out infinite}
+.badge{position:absolute;right:0;top:25%;width:clamp(170px,24vw,240px);aspect-ratio:1;display:grid;place-items:center;transform:rotate(-12deg);animation:pulse 1.8s ease-in-out infinite;z-index:3}
 .badge svg{position:absolute;inset:0;width:100%;height:100%}
-.badge span{position:relative;color:#fff;font:900 clamp(24px,6.4vw,34px)/1 var(--display);letter-spacing:.01em;text-transform:uppercase}
+.badge span{position:relative;color:#fff;font:900 clamp(18px,2.5vw,30px)/1.05 var(--display);letter-spacing:.01em;text-transform:uppercase;display:block;text-align:center;padding:0 12px}
 .badge sup{font-size:.55em}
 @keyframes pulse{50%{transform:rotate(-12deg) scale(1.07)}}
 .free-line{margin-top:16px;background:var(--red);color:#fff;font:800 clamp(17px,3.6vw,21px)/1.3 var(--display);text-align:center;border-radius:14px;padding:12px 16px;max-width:420px;box-shadow:0 10px 24px -12px var(--red)}
+
+.product-pair{display:flex;align-items:center;justify-content:center;gap:clamp(10px,2vw,22px);flex-wrap:nowrap;position:relative;z-index:1;width:100%;max-width:520px}
+.product-pair img{width:clamp(120px,18vw,220px);max-width:40%;height:auto;border-radius:16px;border:1px solid var(--line);background:#fff;box-shadow:0 16px 28px -24px rgba(30,60,15,.4)}
+.plus{font:900 clamp(38px,5vw,84px)/1 var(--display);color:var(--green-d);display:inline-block;transform:translateY(-10px);flex:none}
+.doc-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:22px;align-items:center}
+.doc-copy,.doc-media{background:var(--surface);border:1px solid var(--line);border-radius:24px;padding:24px}
+.doc-copy h3,.doc-media h3{font-size:clamp(22px,2.4vw,26px);margin:0 0 12px}
+.doc-copy p{margin:0 0 12px;color:var(--muted)}
+.usage-list{margin:0;padding-left:18px;display:grid;gap:8px;color:var(--ink);font-weight:600}
+.usage-list li::marker{color:var(--green-d)}
+.doc-links{display:flex;flex-wrap:wrap;gap:12px;margin-top:18px}
+.doc-links a{display:inline-flex;align-items:center;justify-content:center;min-height:42px;padding:10px 16px;border-radius:999px;background:var(--green-d);color:#fff;text-decoration:none;font-weight:800;border:1px solid var(--green-d)}
+.doc-links a.secondary{background:transparent;color:var(--green-d)}
+.doc-media{display:grid;justify-items:center;gap:16px}
+.gmp-mark{display:block;width:190px;height:auto}
+
+@media (max-width:860px){
+  .doc-grid{grid-template-columns:1fr}
+  .product-pair img{max-width:36%}
+}
 
 /* form card */
 .card{background:var(--surface);border-radius:24px;padding:26px 22px;box-shadow:0 30px 60px -36px rgba(28,42,22,.55);border:1px solid var(--line);min-width:0;scroll-margin-top:60px}
@@ -125,9 +145,19 @@ body.closed{overflow:hidden}
 @media (max-width:860px){
   .hero .wrap{grid-template-columns:1fr;gap:26px;padding-block:24px 36px}
   .hero-l{text-align:center;display:grid;justify-items:center}
+  .product{max-width:420px;padding-inline:8px}
+  .product-pair{gap:10px;max-width:100%}
+  .product-pair img{width:clamp(110px,32vw,180px);max-width:38%}
+  .badge{right:2%;top:18%;width:clamp(130px,31vw,180px)}
+  .badge span{font-size:clamp(16px,4vw,22px)}
   .sticky.show{display:block}
 }
 @media (max-width:420px){
+  .product-pair{flex-wrap:nowrap;gap:8px}
+  .product-pair img{width:clamp(100px,36vw,150px)}
+  .plus{font-size:32px}
+  .badge{top:20%;right:0;width:120px}
+  .badge span{padding:0 8px}
   .dose b{font-size:21px}
 }
 </style>
@@ -145,13 +175,17 @@ body.closed{overflow:hidden}
         <span class="kicker">Oilada diabet bormi?</span>
         <h1>Qondagi qand miqdorini <em>normada ushlashga</em> yordam bering</h1>
         <div class="product">
-          <img src="./NOOTROZ3.png" alt="NOOTROZ product">
-          <div class="badge" aria-label="Bepul">
+          <div class="product-pair">
+            <img src="./NOOTROZ3.png" alt="NOOTROZ product">
+            <span class="plus">+</span>
+            <img src="./МИГРЕНАЗ-L tab.jpg" alt="МИГРЕНАЗ-L tab">
+          </div>
+          <div class="badge" aria-label="Bepul va* MIGRENAZ">
             <svg viewBox="0 0 100 100" aria-hidden="true"><polygon fill="#E3232D" points="50,0 57.7,15.3 72.2,6.1 72.6,23.2 89.6,21.6 81.5,36.7 97.6,42.5 84.2,53.1 96.2,65.5 79.4,68.8 82.9,85.5 66.9,80.1 60.4,95.9 50,82.4 39.6,95.9 33.1,80.1 17.1,85.5 20.6,68.8 3.8,65.5 15.8,53.1 2.4,42.5 18.5,36.7 10.4,21.6 27.4,23.2 27.8,6.1 42.3,15.3"/></svg>
-            <span>Bepul<sup>*</sup></span>
+            <span>Bepul va*<br>MIGRENAZ</span>
           </div>
         </div>
-        <p class="free-line">Hoziroq raqam qoldirsangiz, aksiyada bittasini bepulga olasiz!</p>
+        <p class="free-line">hoziroq qon'giroq qilin va 1+1 aksiyaga ega boling</p>
       </div>
 
       <div class="card" id="ariza">
@@ -179,6 +213,102 @@ body.closed{overflow:hidden}
           <h2>Arizangiz qabul qilindi!</h2>
           <p>Rahmat! Operatorimiz tez orada siz bilan bog‘lanadi. Iltimos, telefoningiz yoniq bo‘lsin.</p>
           <p class="demo" id="demoNote" hidden>Demo rejim: Google Sheets hali ulanmagan, ariza hech qayerga yuborilmadi.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec">
+    <div class="wrap">
+      <h2>Как использовать лекарство</h2>
+      <div class="doc-grid">
+        <div class="doc-copy">
+          <h3># МИГРЕНАЗ L®</h3>
+          <p><strong>ANFA PHARMACEUTICALS</strong></p>
+
+          <h4>СИМПТОМЫ НАРУШЕНИЯ МОЗГОВОГО КРОВООБРАЩЕНИЯ:</h4>
+          <ul class="usage-list">
+            <li>Регулярные головные боли;</li>
+            <li>Боль в глазах в конце дня, усиливается при движении глазами;</li>
+            <li>Головокружения чаще трёх раз в месяц;</li>
+            <li>Тошнота, рвота;</li>
+            <li>Шум в ушах, ощущение заложенности;</li>
+            <li>Онемение рук, ног и других частей тела;</li>
+            <li>Судороги, обмороки;</li>
+            <li>Быстрая утомляемость, рассеянность, нарушение сна, ухудшение памяти.</li>
+          </ul>
+
+          <p>Время неумолимо бежит вперед и это не лучшим образом сказывается на людях, достигающих зрелого возраста, ведь именно в этот период жизни начинают проявляться многие нарушения и патологии человеческого организма. В первую очередь это касается функционирования сердечно-сосудистой системы, одним из нарушений которой является ухудшение мозгового кровообращения.</p>
+
+          <p>Мозговое кровообращение — это движение крови по сосудам головного и спинного мозга. Оно нарушается, когда в одном из сосудов возникает проблема с доставкой крови к заданному участку. Чаще всего нарушения мозгового кровообращения возникают на фоне гипертонии или атеросклероза сосудов.</p>
+
+          <p>Сосуды головного мозга регулируют кровоток. Если один участок мозга усиленно работает, к нему перенаправляется кровь из отделов с меньшей нагрузкой. Во время занятий спортом в коронарные сосуды поступает в 10 раз больше крови, чем обычно. Однако благодаря работе сосудов количество крови в головном мозге не меняется.</p>
+
+          <p>Если в головной мозг поступает крови меньше необходимого уровня, возникает нарушение кровообращения. Хроническая недостаточность мозгового кровообращения вызывает головные боли, головокружения и может привести к инсульту.</p>
+
+          <p>Дерево гинкго считается символом стойкости и долголетия в многих странах Азии. Экстракт листьев дерева гинкго питает мозг, дает ясность сознания, улучшает память, активизирует мыслительные процессы и замедляет старение мозга.</p>
+
+          <p>Среди биологически активных добавок для нормализации мозгового кровообращения на основе экстракта гинкго одна из самых популярных — «МИГРЕНАЗ L®».</p>
+
+          <p>Активно действуя на сосуды мозга, улучшая реологические свойства крови, экстракт гинкго в составе способствует нормализации его кровоснабжения и повышению умственной работоспособности.</p>
+
+          <p>Не случайно более 60% пожилых пациентов в Германии и более 70% — во Франции постоянно принимают биодобавки на основе экстракта гинкго!</p>
+
+          <h4>Свойства препарата</h4>
+          <ul class="usage-list">
+            <li>Улучшает мозговое кровообращение и снабжение мозга;</li>
+            <li>Влияет на обмен веществ в клетках, реологические свойства крови и микроциркуляцию;</li>
+            <li>Оказывает выраженное противоотечное действие на уровне головного мозга и в периферических тканях;</li>
+            <li>Антистрессорное действие проявляется в нормализации постстрессового поведения, соматовегетативных нарушениях, восстановлении циклов сон-бодрствование, нарушенных процессов обучения и памяти, снижении дистрофических и морфологических изменений в различных структурах головного мозга.</li>
+          </ul>
+
+          <p>Богатый и инновационный состав МИГРЕНАЗ L® включает экстракты нескольких лекарственных трав.</p>
+
+          <p><strong>1. Гинкго билоба (Ginkgo)</strong> — способствует улучшению мозгового кровообращения; повышению умственной работоспособности; улучшению памяти и внимания; снижению метеочувствительности.</p>
+          <p><strong>2. Боярышник кроваво-красный (Crataegus sanguinea)</strong> — укрепляет капилляры, улучшает кровообращение, расширяет сосуды, снимает спазмы, снижает количество холестерина в крови, оказывает мягкое мочегонное действие.</p>
+          <p><strong>3. Мята перечная (Mentha piperita)</strong> — содержит дубильные вещества, эфирные масла, бетаин, гесперидин, органические вещества, каротин, флавоноиды. Известны успокаивающее, болеутоляющее, желчегонное, спазмолитическое, антисептическое свойства.</p>
+          <p><strong>4. Тмин обыкновенный (Fructus Carvi)</strong> — обладает тонизирующим, улучшающим мозговую деятельность свойствами и полезен для улучшения памяти. Хорошо помогает при головных болях.</p>
+          <p><strong>5. Валериана лекарственная (Valeriana officinalis)</strong> — оказывает многостороннее действие на организм, угнетает центральную нервную систему, понижает её возбудимость, облегчает наступление естественного сна.</p>
+          <p><strong>6. Ландыш майский (Convallaria majalis)</strong> — оказывает кардиотоническое действие, улучшает сердечную деятельность, замедляет ритм сердечных сокращений, уменьшает застойные явления, одышку, увеличивает диурез.</p>
+
+          <h4>ПОКАЗАНИЯ</h4>
+          <p>МИГРЕНАЗ L® применяют в лечении и профилактике:</p>
+          <ul class="usage-list">
+            <li>При острых и хронических нарушениях мозговых кровообращения;</li>
+            <li>Легкой черепно-мозговой травмы;</li>
+            <li>Синдрома вертебро-дистонии;</li>
+            <li>Легких когнитивных расстройствах атеросклеротического генеза;</li>
+            <li>При расстройствах внимания и памяти, и мыслительной деятельности;</li>
+            <li>Головокружения;</li>
+            <li>Шума в ушах, чувства страха.</li>
+          </ul>
+
+          <h4>РЕЖИМ ДОЗИРОВАНИЯ</h4>
+          <p>Устанавливают индивидуально. Внутрь.</p>
+          <p>Дисциркуляторная энцефалопатия различной этиологии: по 0,5 мл 2–3 раза в день.</p>
+          <p>Нарушение периферического кровообращения и микроциркуляции, синдром Рейно: по 0,5 мл 2 раза в день (утром и вечером).</p>
+          <p>Нейросенсорные нарушения (головокружение, звон в ушах, гипоакузия); старческая дегенерация желтого пятна; диабетическая ретинопатия: по 0,5 мл 2 раза в день (утром и вечером).</p>
+          <p>Первые признаки улучшения обычно появляются через 1 мес. Курс лечения не менее 3 месяца (особенно для пациентов пожилого возраста). Проведение повторного курса возможно после консультации с врачом.</p>
+
+          <p><strong>Контактная информация</strong><br>ООО «TOP PHARM SERVICE»<br>Ташкентская обл., Зангиатинский р-н, КФИ Гулистан, ул. ГСКБ<br>Телефон: +998 (95) 195 59 00<br>E-mail: info@anfa.uz<br>Сайт: www.anfa.uz</p>
+        </div>
+
+        <div class="doc-media">
+          <img class="gmp-mark" src="./GMP - TOP PHARM SERVICE (ANFA PHARMACEUTICALS).png" alt="GMP certificate">
+          <div class="doc-copy" style="padding:18px;">
+            <h4>NOOTROZ BFQsini qo‘llash bo‘yicha yo‘riqnoma</h4>
+            <p><strong>Qo‘llanilishi:</strong> NOOTROZ biologik faol qo‘shimchasi quyidagilar uchun tavsiya etiladi: xotira, diqqat va konsentratsiyani qo‘llab-quvvatlash, keksalarda kognitiv buzilishlarning oldini olish, charchoqlik va stressni kamaytirish, miya qon aylanishini yaxshilash, aqliy yuklamalarda asab tizimini qo‘llab-quvvatlash.</p>
+            <p><strong>Qo‘llash usuli va dozalari:</strong> 18 yoshdan kattalar: kuniga 1 kapsula, ovqat vaqtida, yetarli miqdorda suv bilan. Qabul qilish kursi 1–2 oy. Zarur bo‘lsa, kursni takrorlash mumkin.</p>
+            <p><strong>Qarshi ko‘rsatmalar:</strong> tarkibiy qismlarga individual toqatlarsizlik, homiladorlik va emizish davri (faqat shifokor tavsiyasi bilan), 12 yoshgacha bo‘lgan bolalar, qon ketishga moyillik yoki antikoagulyantlar qabul qilishda ehtiyotkorlik bilan.</p>
+            <p><strong>Nojo‘ya ta’sirlar:</strong> tavsiya etilgan dozaga rioya qilinsa, nojo‘ya ta’sirlar kuzatilmaydi. Kamdan-kam hollarda allergik reaksiya yoki ovqat hazm qilishdagi noqulaylik bo‘lishi mumkin.</p>
+            <p><strong>Me’yordan ortiq qabul qilish:</strong> doza oshirib yuborilganda yon ta’sirlar kuchayishi mumkin: ko‘ngil aynishi, oshqozon buzilishi, bosh og‘rig‘i. Bunday hollarda qabulni to‘xtatish va shifokorga murojaat qilish kerak.</p>
+            <p><strong>Saqlash sharoitlari:</strong> quruq joyda, +25°C dan yuqori bo‘lmagan haroratda, to‘g‘ridan-to‘g‘ri quyosh nurlari tushmaydigan va bolalar qo‘li yetmaydigan joyda saqlang.</p>
+            <p><strong>Yaroqlilik muddati:</strong> ishlab chiqarilgan kundan boshlab 2 yil. Qadoqda ko‘rsatilgan yaroqlilik muddati tugagandan keyin ishlatish mumkin emas.</p>
+            <p><strong>Ishlab chiqaruvchi:</strong> “TOPPHARM SERVICE” MChJ. O‘zbekiston Respublikasi, Sirdaryo viloyati, Sirdaryo tumani, Kamolot MFY, Yangi ko‘cha, 90-uy. E-mail: info@anfa.uz. www.anfa.uz</p>
+            <p><strong>Tarkibi va chiqarilish shakli:</strong> yumshoq jelatin kapsulalari №30. Ginkgo Biloba bargi ekstrakti – 180 mg, Omega-3 yog‘ kislotalari – 330 mg (DHA 12% va EPA 18%), Vitamin B1 – 0,7 mg, Vitamin B6 – 1 mg, Vitamin B12 – 1 mkg, Pantoten kislotasi – 3 mg.</p>
+            <p><strong>NOOTROZ</strong> miya faoliyatini qo‘llab-quvvatlash, xotira, diqqat va aqliy energiyani kuchaytiruvchi noyob majmuadir. Tarkibida Ginkgo Biloba ekstrakti, Omega-3 yog‘ kislotalari va B guruhi vitaminlari mavjud bo‘lib, ular birgalikda miya qon aylanishini me’yorlashtirishga, kognitiv funksiyalarni kuchaytirishga va charchoqlikni kamaytirishga yordam beradi.</p>
+            <p>Ginkgo Biloba va Omega-3 miya qon ta’minoti va oziqlanishini yaxshilab, kognitiv funksiyalarni oshiradi. Vitaminlar B1, B6 va B12 asab tizimini qo‘llab-quvvatlovchi va energiya almashinuvini yaxshilovchi klassik neyrotrop kompleks hisoblanadi. Pantoten kislotasi va B vitaminlari stressga chidamlilikni oshiradi va aqliy yuklamalarda yordam beradi.</p>
+          </div>
         </div>
       </div>
     </div>

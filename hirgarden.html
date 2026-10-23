@@ -4,8 +4,8 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="theme-color" content="#262A24">
-<title>INSUDOL</title>
-<meta name="description" content="INSUDOL — qondagi qand miqdorini normada ushlashga yordam beruvchi o‘simlik ekstraktlari kompleksi. Hoziroq raqam qoldiring, birinchisi bepul.">
+<title>HER ELIONA</title>
+<meta name="description" content="HER ELIONA — ayollar salomatligi va go‘zalligi uchun premium kompleks. Hoziroq raqam qoldiring, birinchisi bepul.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&family=Manrope:wght@400;500;600;700;800&display=swap">
@@ -43,15 +43,29 @@ p{margin:0}
 h1{font-size:clamp(26px,4.2vw,40px);font-weight:800;color:var(--dark)}
 h1 em{font-style:normal;color:var(--green-d)}
 
-.product{position:relative;display:grid;justify-items:center;margin-top:18px}
-.product img{width:min(230px,58vw);height:auto;filter:drop-shadow(0 26px 30px rgba(30,60,15,.28));animation:float 5s ease-in-out infinite}
+.product{position:relative;display:grid;justify-items:center;margin-top:18px;padding:8px 16px 0;max-width:540px;width:100%}
+.product img{height:auto;filter:drop-shadow(0 26px 30px rgba(30,60,15,.28));animation:float 5s ease-in-out infinite}
 @keyframes float{50%{transform:translateY(-8px)}}
-.badge{position:absolute;top:2%;right:calc(50% - min(260px,72vw)/2 - 10px);width:min(150px,38vw);aspect-ratio:1;display:grid;place-items:center;transform:rotate(-12deg);animation:pulse 1.8s ease-in-out infinite}
+.product-pair{display:flex;align-items:center;justify-content:center;gap:clamp(10px,2vw,22px);flex-wrap:nowrap;position:relative;z-index:1;width:100%;max-width:520px}
+.product-pair img{width:clamp(120px,18vw,220px);max-width:40%;height:auto;border-radius:16px;border:1px solid var(--line);background:#fff;box-shadow:0 16px 28px -24px rgba(30,60,15,.4)}
+.plus{font:900 clamp(38px,5vw,84px)/1 var(--display);color:var(--green-d);display:inline-block;transform:translateY(-10px);flex:none}
+.badge{position:absolute;right:0;top:25%;width:clamp(170px,24vw,240px);aspect-ratio:1;display:grid;place-items:center;transform:rotate(-12deg);animation:pulse 1.8s ease-in-out infinite;z-index:3}
 .badge svg{position:absolute;inset:0;width:100%;height:100%}
-.badge span{position:relative;color:#fff;font:900 clamp(24px,6.4vw,34px)/1 var(--display);letter-spacing:.01em;text-transform:uppercase}
+.badge span{position:relative;color:#fff;font:900 clamp(18px,2.5vw,30px)/1.05 var(--display);letter-spacing:.01em;text-transform:uppercase;display:block;text-align:center;padding:0 12px}
 .badge sup{font-size:.55em}
 @keyframes pulse{50%{transform:rotate(-12deg) scale(1.07)}}
 .free-line{margin-top:16px;background:var(--red);color:#fff;font:800 clamp(17px,3.6vw,21px)/1.3 var(--display);text-align:center;border-radius:14px;padding:12px 16px;max-width:420px;box-shadow:0 10px 24px -12px var(--red)}
+.doc-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:22px;align-items:center}
+.doc-copy,.doc-media{background:var(--surface);border:1px solid var(--line);border-radius:24px;padding:24px}
+.doc-copy h3,.doc-media h3{font-size:clamp(22px,2.4vw,26px);margin:0 0 12px}
+.doc-copy p{margin:0 0 12px;color:var(--muted)}
+.usage-list{margin:0;padding-left:18px;display:grid;gap:8px;color:var(--ink);font-weight:600}
+.usage-list li::marker{color:var(--green-d)}
+.doc-links{display:flex;flex-wrap:wrap;gap:12px;margin-top:18px}
+.doc-links a{display:inline-flex;align-items:center;justify-content:center;min-height:42px;padding:10px 16px;border-radius:999px;background:var(--green-d);color:#fff;text-decoration:none;font-weight:800;border:1px solid var(--green-d)}
+.doc-links a.secondary{background:transparent;color:var(--green-d)}
+.doc-media{display:grid;justify-items:center;gap:16px}
+.gmp-mark{display:block;width:190px;height:auto}
 
 /* form card */
 .card{background:var(--surface);border-radius:24px;padding:26px 22px;box-shadow:0 30px 60px -36px rgba(28,42,22,.55);border:1px solid var(--line);min-width:0;scroll-margin-top:60px}
@@ -142,21 +156,25 @@ body.closed{overflow:hidden}
     <div class="wrap">
       <div class="hero-l">
         <div class="brand"><b>ANFA</b><span>Group of Companies</span></div>
-        <span class="kicker">Oilada diabet bormi?</span>
-        <h1>Qondagi qand miqdorini <em>normada ushlashga</em> yordam bering</h1>
+        <span class="kicker">Premium ayollar kompleksi</span>
+        <h1><em>HER ELIONA</em> — ayollarga qulay, kuchli va zamonaviy kompleks</h1>
         <div class="product">
-          <img src="./hisGRADOR-3D.png" alt="HIS GRADOR product">
-          <div class="badge" aria-label="Bepul">
+          <div class="product-pair">
+            <img src="./hisGRADOR-3D.png" alt="HER ELIONA product">
+            <span class="plus">+</span>
+            <img src="./virtusin.png" alt="VIRTUSIN product">
+          </div>
+          <div class="badge" aria-label="Bepul va* VIRTUSIN">
             <svg viewBox="0 0 100 100" aria-hidden="true"><polygon fill="#E3232D" points="50,0 57.7,15.3 72.2,6.1 72.6,23.2 89.6,21.6 81.5,36.7 97.6,42.5 84.2,53.1 96.2,65.5 79.4,68.8 82.9,85.5 66.9,80.1 60.4,95.9 50,82.4 39.6,95.9 33.1,80.1 17.1,85.5 20.6,68.8 3.8,65.5 15.8,53.1 2.4,42.5 18.5,36.7 10.4,21.6 27.4,23.2 27.8,6.1 42.3,15.3"/></svg>
-            <span>Bepul<sup>*</sup></span>
+            <span>Bepul va*<br>VIRTUSIN</span>
           </div>
         </div>
-        <p class="free-line">Hoziroq raqam qoldirsangiz, aksiyada bittasini bepulga olasiz!</p>
+        <p class="free-line">Hoziroq raqam qoldirsangiz, aksiyada 1+1 taklifidan foydalaning!</p>
       </div>
 
       <div class="card" id="ariza">
         <div id="formWrap">
-          <h2>Shaklni to‘ldiring va <span class="q">INSUDOL</span>ni bepul oling<sup>*</sup></h2>
+          <h2>Shaklni to‘ldiring va <span class="q">HER ELIONA</span>ni bepul oling<sup>*</sup></h2>
           <p class="sub">Faqat ism-familiyangiz va telefon raqamingiz kerak.</p>
           <div class="timer">Shoshiling! Vaqt qoldi: <span class="t tleft">10:00</span></div>
           <form id="leadForm" novalidate>
@@ -186,42 +204,131 @@ body.closed{overflow:hidden}
 
   <section class="sec">
     <div class="wrap">
-      <h2>INSUDOL qanday yordam beradi</h2>
-      <ul class="benefits">
-        <li><svg width="28" height="28" viewBox="0 0 28 28" aria-hidden="true"><circle cx="14" cy="14" r="14" fill="#E3F3D6"/><path d="M8 14.5l4 4 8-8.5" fill="none" stroke="#2F7F1B" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>Qondagi shakar miqdorini pasaytirishga yordam beradi</li>
-        <li><svg width="28" height="28" viewBox="0 0 28 28" aria-hidden="true"><circle cx="14" cy="14" r="14" fill="#E3F3D6"/><path d="M8 14.5l4 4 8-8.5" fill="none" stroke="#2F7F1B" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>Uglevod almashinuvini tartibga solishda ishtirok etadi</li>
-        <li><svg width="28" height="28" viewBox="0 0 28 28" aria-hidden="true"><circle cx="14" cy="14" r="14" fill="#E3F3D6"/><path d="M8 14.5l4 4 8-8.5" fill="none" stroke="#2F7F1B" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>Quvvat tanqisligini qoplashga yordam beradi</li>
-        <li><svg width="28" height="28" viewBox="0 0 28 28" aria-hidden="true"><circle cx="14" cy="14" r="14" fill="#E3F3D6"/><path d="M8 14.5l4 4 8-8.5" fill="none" stroke="#2F7F1B" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>Ortiqcha vaznni kamaytirish va barqarorlashtirishga yordam beradi</li>
-        <li><svg width="28" height="28" viewBox="0 0 28 28" aria-hidden="true"><circle cx="14" cy="14" r="14" fill="#E3F3D6"/><path d="M8 14.5l4 4 8-8.5" fill="none" stroke="#2F7F1B" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>Periferik qon aylanishini yaxshilashda ishtirok etadi</li>
-      </ul>
-    </div>
-  </section>
+      <h2>Как использовать лекарство</h2>
+      <div class="doc-grid">
+        <div class="doc-copy">
+          <img src="./GMP - TOP PHARM SERVICE (ANFA PHARMACEUTICALS).png" alt="GMP certificate" style="width:220px;display:block;margin:0 auto 18px;">
+          <h3>HER ELIONA</h3>
+          <p><strong>ANFA PHARMACEUTICALS</strong></p>
+          <p><strong>O‘zbekiston Respublikasi Sog‘liqni Saqlash vazirligi tomonidan tasdiqlangan.</strong><br>O’zMSt 166-2024</p>
 
-  <section class="sec plants">
-    <div class="wrap">
-      <h2>Tarkibida 7 ta o‘simlik ekstrakti</h2>
-      <div class="chips">
-        <span class="chip"><b>Topinambur</b><i>Helianthus tuberosus</i></span>
-        <span class="chip"><b>Qariqiz ildizi</b><i>Arctium lappa</i></span>
-        <span class="chip"><b>Dorivor momaqaymoq</b><i>Taraxacum officinale</i></span>
-        <span class="chip"><b>Oddiy chetan</b><i>Sorbus aucuparia</i></span>
-        <span class="chip"><b>Bo‘znoch</b><i>Helichrysum arenarium</i></span>
-        <span class="chip"><b>Dafna yaprog‘i</b><i>Laurus nobilis</i></span>
-        <span class="chip"><b>Dala qirqbo‘g‘imi</b><i>Equisetum arvense</i></span>
-      </div>
-      <div class="tags"><span>100% tabiiy</span><span>Vitaminlar manbai</span><span>Mikroelementlar</span></div>
-    </div>
-  </section>
+          <h4>QO‘LLANILISHI</h4>
+          <p>HER ELIONA biologik faol qo‘shimchasi ayollarga:</p>
+          <ul class="usage-list">
+            <li>suyaklar, sochlar, teri va tirnoqlarni mustahkamlashda;</li>
+            <li>yurak-qon tomir tizimini qo‘llab-quvvatlashda;</li>
+            <li>yoshlik va energiyani saqlab qolishda;</li>
+            <li>menopauza va postmenopauza davrida Omega-3, vitaminlar va kollagen manbai sifatida tavsiya etiladi.</li>
+          </ul>
 
-  <section class="sec">
-    <div class="wrap">
-      <h2>Qabul qilish usuli</h2>
-      <div class="dose">
-        <div><b>5 ml</b><span>sirop</span></div>
-        <div><b>3 mahal</b><span>kuniga</span></div>
-        <div><b>Ovqat</b><span>vaqtida</span></div>
+          <h4>QO‘LLANISH USULI VA DOZALARI</h4>
+          <p>18 yoshdan kattalar uchun: kuniga 1 marta ovqat paytida 1 kapsuladan.</p>
+          <p>Qabul qilish muddati: 1 oydan 3 oygacha. Takroriy qo‘llashga ruxsat etiladi.</p>
+
+          <h4>QARSHI KO‘RSATMALAR</h4>
+          <ul class="usage-list">
+            <li>Tarkibiy qismlarga individual toqatsizlik.</li>
+            <li>Homiladorlik va emizish davri (faqat shifokor tavsiyasi bilan).</li>
+            <li>18 yoshgacha bo‘lgan bolalar.</li>
+            <li>Qon ketishga moyillik yoki antikoagulyantlar qabul qilish — ehtiyotkorlik bilan.</li>
+          </ul>
+
+          <h4>NOJO‘YA TAʼSIRLAR</h4>
+          <p>Tavsiya etilgan dozalarda nojo‘ya taʼsirlar kam uchraydi. Noyob hollarda: allergik reaksiyalar; yengil dispeptik buzilishlar.</p>
+
+          <h4>ME'YORDAN ORTIQ QABUL QILISH</h4>
+          <p>Ortiqcha qabul qilish qon bosimining koʻtarilishi, bosh ogʻrigʻi yoki yurak urish tezlashishi bilan namoyon boʻlishi mumkin. Bunday hollarda qabul qilishni to‘xtatish kerak.</p>
+
+          <h4>BOSHQA VOSITALAR BILAN O‘ZARO TAʼSIRI</h4>
+          <ul class="usage-list">
+            <li>Antikoagulyantlarning taʼsirini kuchaytirishi mumkin.</li>
+            <li>Ko‘pchilik vitamin-mineral komplekslari bilan mos keladi.</li>
+            <li>Temir saqlovchi preparatlar bilan bir vaqtda emas, alohida qabul qilish tavsiya etiladi.</li>
+          </ul>
+
+          <h4>SAQLASH SHAROITLARI</h4>
+          <p>Quruq joyda, +25°C dan yuqori bo'lmagan haroratda, to'g'ridan-to'g'ri quyosh nurlari tushmaydighan hamda bolalar qo'li yetmaydigan joyda saqlansin.</p>
+
+          <h4>YAROQLILIK MUDDATI</h4>
+          <p>Ishlab chiqarilgan sanadan boshlab 2 yil. Qadoqda ko'rsatilgan yaroqlilik muddati o'tgandan keyin ishlatilinmasin.</p>
+
+          <h4>ISHLAB CHIQARUVCHI</h4>
+          <p>“TOP PHARM SERVICE” MChJ.<br>O‘zbekiston Respublikasi, Sirdaryo viloyati, Sirdaryo tumani, Kamolot MFY, Yangi ko‘cha, 90-uy. E-mail: info@anfa.uz. www.anfa.uz</p>
+
+          <h4>TARKIBI VA CHIQARILISH SHAKLI</h4>
+          <p>Yumshoq jelatin kapsulalari №30.</p>
+          <ul class="usage-list">
+            <li>Omega-3 (18:12, baliq yogʻi kontsentrati) — 600 mg (EPA 360 mg, DHA 240 mg)</li>
+            <li>Vitamin E (d-alfa-tokoferol) — 15 mg (22,4 IU)</li>
+            <li>Vitamin D3 — 15 mkg (600 IU)</li>
+            <li>Vitamin K2 (MK-7) — 90 mkg</li>
+            <li>Biotin — 150 mkg</li>
+            <li>Kollagen (baliq, gidroliz qilingan) — 200 mg</li>
+            <li>Klyukva ekstrakti (10:1) — 100 mg</li>
+            <li>Yordamchi moddalar: yetarli miqdorda.</li>
+          </ul>
+
+          <p>HER ELIONA — ayollar salomatligi va go‘zalligi uchun yaratilgan premium kompleks. Tarkibida Omega-3 yog‘ kislotalari, vitaminlar D3, E, K2, biotin, kollagen va klyukva ekstrakti mavjud. Formulasi yurak va suyak salomatligini mustahkamlashga, teri, soch va tirnoqlarning holatini yaxshilashga, immunitetni kuchaytirishga va ayollarda siydik yo‘llari kasalliklarini oldini olishga qaratilgan.</p>
+          <p>Vitamin E kuchli antioksidant boʻlib, hujayralarni shikastlanishdan himoya qiladi. Teri sog‘ligini qo‘llab-quvvatlaydi, erta qarishning oldini oladi. Ayol reproduktiv tizimi faoliyatida ishtirok etadi.</p>
+          <p>Biotin. “Go‘zallik vitamini”: sochlarni mustahkamlaydi, ularni yanada qalin va jiloli qiladi. Teri holatini yaxshilaydi, tirnoqlarning mo‘rtligini kamaytiradi. Yog‘ va uglevod almashinuvini qo‘llab-quvvatlaydi.</p>
+          <p>Omega-3 yog‘ kislotalari (EPA 18% va DHA 12%). Yurak, qon tomirlari va miya sog‘ligi uchun zarur bo‘lgan yuqori dozali yarim to’yingan yog‘lar. EPA qondagi yog‘ darajasini pasaytiradi, yallig‘lanishni kamaytiradi va tomirlarni mustahkamlaydi. DHA kognitiv funksiyalarni qo‘llab-quvvatlaydi, miya va koʻrish faoliyatini yaxshilaydi. Birgalikda qon lipid profilini normallashtiradi, ateroskleroz va tromboz xavfini kamaytiradi, boʻg‘imlar sog‘ligini qo‘llab-quvvatlaydi.</p>
+          <p>Vitamin K2. Vitamin D3 bilan hamohang ishlaydi, kalsiyni suyaklarga yo‘naltiradi. Qon tomirlarini kalsifikatsiyadan himoya qiladi. Yurak-qon tomir kasalliklari xavfini kamaytiradi.</p>
+          <p>Vitamin D3. Kalsiyni oʻzlashtirishni yaxshi qiladi, suyaklar va tishlarni mustahkamlaydi. Immunitet va gormonal muvozanatni qo‘llab-quvvatlaydi. 40 yoshdan keyingi ayollarda osteoporoz xavfini kamaytiradi.</p>
+          <p>Kollagen. Teri elastikligi va tarangligini taʼminlaydi. Bo‘g‘im, pay va suyaklar sog‘ligini mustahkamlaydi. Gidroliz qilingan shaklda organizm tomonidan oson o‘zlashtiriladi.</p>
+        </div>
+
+        <div class="doc-copy">
+          <h3>VIRTUSIN®</h3>
+          <p><strong>ANFA PHARMACEUTICALS</strong></p>
+          <h4>Основные признаки проявления простатита являются:</h4>
+          <ul class="usage-list">
+            <li>Боли внизу живота, мошонке, промежности;</li>
+            <li>Расстройство мочеиспускания;</li>
+            <li>Расстройство половой функции (сексуальной дисфункции);</li>
+            <li>Изменение количества и качества эякулята;</li>
+            <li>Расстройство эякуляции.</li>
+          </ul>
+
+          <p><strong>Что такое простатит?</strong> ПРОСТАТИТ от лат. prostatitis; анат. Prostata — предстательная железа + itis — воспаление. Простатит — это воспаление ткани предстательной железы, ее отек. Это термин, определяющий воспаление предстательной железы. Простатит может развиться у мужчин.</p>
+          <p>По статистике, за последние 20 лет заболеваемость простатитом возросла примерно вдвое, и сейчас, на заре XXI века, им страдает едва ли не половина мужского населения Земли в возрасте от 20 до 50.</p>
+
+          <h4>Причины возникновения простатита</h4>
+          <ul class="usage-list">
+            <li>Инфекции, передаваемые половым путем;</li>
+            <li>Нарушение кровообращения в органах малого таза;</li>
+            <li>Сидячий образ жизни;</li>
+            <li>Длительное половое воздержание;</li>
+            <li>Нарушение иммунитета;</li>
+            <li>Частое переохлаждение;</li>
+            <li>Стрессы;</li>
+            <li>Гормональный дисбаланс;</li>
+            <li>Дефицит витаминов и микроэлементов.</li>
+          </ul>
+
+          <h4>Суточная потребность организма в микро- и макроэлементах</h4>
+          <p><strong>Каждая таблетка «Виртусин» содержит:</strong> кальций 120 мг, фосфор 120 мг, магний 90 мг, натрий 137,5 мг, калий 500 мг, железо 2,5 мг, йод 48 мкг, фтор 0,95 мг, цинк 2 мг, селен 12,5 мкг, медь 0,375 мг, марганец 0,9 мг, хром 17,5 мкг, молибден 18,75 мкг.</p>
+
+          <h4>Действие препарата</h4>
+          <p>Повышают либидо, энергию, выносливость. Нормализует функции мочеполовых органов у мужчин. Является источником витамина E, цинка, меди. Улучшает и поддерживает функцию предстательной железы. Стимулирует половую потенцию у мужчин и усиление репродуктивных способностей.</p>
+
+          <h4>ПОКАЗАНИЯ</h4>
+          <ul class="usage-list">
+            <li>Профилактика или лечение острого простатита и аденомы предстательной железы;</li>
+            <li>Цистите;</li>
+            <li>Профилактика обострений хронического простатита;</li>
+            <li>Дополнительная длительная терапия после перенесённого простатита;</li>
+            <li>Функциональные нарушения мочеполовой системы;</li>
+            <li>Снижение эрекции;</li>
+            <li>Для нормализации функций и структуры предстательной железы.</li>
+          </ul>
+
+          <h4>РЕЖИМ ДОЗИРОВАНИЯ</h4>
+          <p>Взрослым — по 1 таблетке 2 раза в день за 5–10 минут до еды. Продолжительность курса определяется индивидуально; при хронических заболеваниях курс лечения составляет 30 дней.</p>
+
+          <h4>Контактная информация</h4>
+          <p>ООО «TOP PHARM SERVICE»<br>Ташкентская обл., Зангиатинский р-н, КФИ Гулистан, ул. ГСКБ.<br>Телефон: +998 (95) 195 59 00<br>E-mail: info@anfa.uz<br>Сайт: www.anfa.uz</p>
+        </div>
       </div>
-      <p class="note">Qabul qilish davomiyligi uzoq muddatli. Miqdori va muddati shifokor tomonidan individual belgilanadi.</p>
     </div>
   </section>
 
